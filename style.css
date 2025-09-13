@@ -1,0 +1,604 @@
+/* =====================BASIC CONFIGURATIONS============================*/
+
+*{box-sizing:border-box}
+
+span mark {
+  padding: 5px;
+  border-radius: 10px;
+  background-color: palegreen;
+  color:seagreen;
+  margin-right: 2px;
+}
+
+.gobtn {
+  height:50px;
+    transition: transform 0.3s ease;
+}
+
+.btn-info:hover {
+  background-color:rgb(71, 214, 133);
+  border-color:seagreen;
+  transform: rotate(-90deg);
+}
+
+.btn-info:active {
+  background-color:rgb(39, 120, 74) !important;
+
+}
+
+#skill {
+  height: 85%;
+}
+
+#home{padding-top:20px}
+
+h1 {
+  font-size: 40px;
+}
+
+.icon-span {
+  padding: 6px;
+  margin-right: 6px;
+  border-radius: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: rgb(16, 16, 108);
+}
+
+#nav2 {
+
+padding-top: 20px;
+padding-bottom: 20px;
+}
+
+.icon-span i{
+  color: rgb(225, 225, 146);
+}
+
+.card img{
+  width: 100%;
+  object-fit: cover;
+}
+
+img {
+  max-width: 70vw;
+}
+
+.shadow-drop {
+  margin: 30px;
+  filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.5));
+}
+
+.wrap-content {
+  display:inline-block;
+}
+
+.title {
+  display:flex;
+}
+
+#explain-text {
+  color: #565555;
+  /* font-style:italic; */
+}
+
+ol {
+  list-style: none;
+}
+
+i {
+  width: 3rem;
+}
+
+svg {
+  width: 1.25rem;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+	.view, .floating { transition: none; }
+}
+
+nav {
+  z-index: 2000;
+}
+
+.hidden {
+  display:none !important
+}
+
+
+
+/* ========================= FADE-IN ANIMATION  =========================*/
+.view{
+  min-height:calc(100svh - 56px);
+  display:grid; 
+  place-items:center;
+  opacity:0; 
+  transform:translateY(12px); transition:opacity .5s ease, transform .5s ease;
+}
+.view.is-active{
+  opacity:1;
+  transform:none
+}
+.view[aria-hidden="true"]{
+  pointer-events:none;
+  display:none;
+}
+
+[data-animate] {opacity:0; transform:translateY(8px); transition:opacity .5s ease, transform .6s cubic-bezier(.2, .7, 0, 1);}
+[data-animate].in {opacity:1; transform:none}
+@media (prefers-reduced-motion: reduce) {
+  *{animation: none !important; transition:none !important}
+}
+
+/*=====================    MODAL.     ===============================*/
+.modal {position:fixed; inset:0; display:grid; place-items:center; opacity:0; pointer-events:none; transition:opacity .2s ease; z-index:500000}
+.modal[open], .modal.is-open{opacity:1; pointer-events:auto}
+.modal__backdrop{position:absolute; inset:0; background:rgba(0,0,0,.1)}
+.modal__dialog{
+  width:min-content;
+  border-radius: 10px;
+  display: grid;
+  place-items:center;
+  position:relative; background: rgb(255, 255, 255); color:#45553d; border:1px solid rgb(141, 241, 181);
+  transform:translateY(10px); transition:transform .25s ease;
+}
+
+#modal-todo .modal__dialog {
+  width:fit-content;
+}
+
+#modal-todo ul {
+  margin-top: 10%;
+}
+
+
+
+.modal__dialog h3 {
+  margin-top: 5%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#modal-card .modal__backdrop {
+  height:160svh;
+}
+
+#modal-card .modal {
+  overflow:scroll;
+}
+
+#modal-card .modal__dialog {
+  width: min-content;
+  margin-top:20px;
+}
+
+#modal-card .modal {
+  overflow: scroll;
+}
+#modal-card h3 {
+  margin-top: 20px;
+}
+
+#modal-card img {
+  max-width: 300px;
+  margin-top:15px;
+  margin-right:35px;
+  margin-left:35px;
+  
+}
+
+.modal__dialog img#scream {
+  max-height: 350px;
+  margin-top: 15px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 25px;
+}
+
+.modal__dialog iframe {
+  min-height: 350px;
+  margin-top: 5%;
+}
+
+div.scroll-container {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.modal__dialog ul {
+  margin-top: 10px;
+  background-color: rgb(141, 241, 181);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.modal__dialog a {
+  color: rgb(47, 54, 51);
+
+}
+
+#modal-card ul {
+  margin-top:25px;
+}
+
+#modal-todo ul {
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+.modal__dialog p{
+  max-width: 600px;
+  margin-bottom: 5%;
+  margin-top: 10px;
+}
+
+
+.modal.is-open .modal__dialog{transform:none}
+.modal__close {
+  position:absolute; inset-inline-end:10px; inset-block-start:8px; border:0; background:transparent; color:#94a3b8;
+  font-size:28px; line-height:1; cursor:pointer;
+}
+
+
+/*====================== SCALE ON HOVER   ============================*/
+
+.hover-grow {
+transition: transform .18s ease, box-shadow .18s ease;
+will-change: transform;
+}
+
+.hover-grow:hover,
+.hover-grow:focus-within {            
+transform: scale(1.03);
+box-shadow: var(--bs-box-shadow-lg); 
+z-index: 1;                         
+}
+
+@media (prefers-reduced-motion: reduce) {
+.hover-grow { transition: none; }
+}
+
+/*====================   FLOATING BUTTON ================================*/
+
+.floating {
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+	z-index: 1040;
+	transition: transform .18s ease, box-shadow .18s ease, opacity .18s ease;
+}
+.floating:hover {
+	transform: scale(1.04); 
+	box-shadow: var(--bs-box-shadow-lg);
+	
+}
+
+.github-expand-btn{
+  --btn-size: 70px;                 
+  height: var(--btn-size);
+  width:  var(--btn-size);  
+  border-radius: 100px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding-inline:0;
+  overflow: hidden;            
+  white-space: nowrap;
+
+  transition: width .3s ease, background-color .2s ease, box-shadow .2s ease;
+}
+
+.github-expand-btn > i{
+  margin-left:7.5px;
+  font-size: 2rem;                
+  line-height: 1;
+}
+
+.github-expand-btn:hover,
+.github-expand-btn:focus-visible{
+  width: 270px;                     
+}
+
+.github-expand-btn .label{
+  opacity: 0;
+  max-width:0;
+  overflow:hidden;
+  transform: translateX(-6px);
+  transition: opacity .18s ease .1s, transform .18s ease .1s;
+}
+
+.github-expand-btn:hover .label,
+.github-expand-btn:focus-visible .label{
+  opacity: 1;
+  max-width:fit-content;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .github-expand-btn,
+  .github-expand-btn .label{
+    transition: none;
+  }
+}
+
+/* ================================================================= */
+/* CONTACt & MEDIA QUERY */
+#contact-list {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+#contact-list .item {
+  gap: 0.65rem;
+  padding: 0.15rem 0;
+}
+
+#contact-list .icon-col {
+  width: 1.3em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  /* controls both <i> and svg (via 1em) */
+}
+
+#contact-list .icon-col i {
+  line-height: 1;
+}
+
+/* crisp vertical centering */
+#contact-list .icon-col svg {
+  width: 1em;
+  height: 1em;
+  display: block;
+}
+
+/* sm (≥576px and <768px) — small */
+@media (min-width: 576px) {
+  #contact-list {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  #contact-list .icon-col {
+    width: 1.4em;
+    font-size: 1.25em;
+  }
+}
+
+/* md (≥768px and <992px) — medium */
+@media (min-width: 768px) {
+  #contact-list {
+    font-size: 1.125rem;
+    line-height: 1.8;
+  }
+
+  #contact-list .icon-col {
+    width: 1.6em;
+    font-size: 1.35em;
+  }
+}
+
+/* lg (≥992px) — large */
+@media (min-width: 992px) {
+  #contact-list {
+    font-size: 1.25rem;
+    line-height: 1.9;
+  }
+
+  #contact-list .icon-col {
+    width: 1.75em;
+    font-size: 1.5em;
+  }
+
+
+}
+
+/*====================  =====================*/
+/* <992px */
+@media (max-width: 991.98px) {
+  #skill-container { padding-top: 40px; }
+
+}
+
+@media (max-width: 575.98px) {
+  
+  #out{
+    padding-right: 13%;
+    padding-left: 13%;
+  }
+}
+
+/* @media (max-width: 768px) {
+  .modal__dialog p{
+    max-width:400px;
+  } */
+
+
+
+@media (min-width: 768px) {
+  .list-group-horizontal li, .skill-li {
+    font-size: 19px;
+  }
+}
+  .skill-li {
+    margin-bottom: 5px;
+  }
+
+@media (min-width: 992px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+  .list-group-horizontal li, .skill-li {
+    font-size: 17px;
+  }
+  h3, ul {
+    font-size: 28px;
+  }
+
+  p, li {
+    font-size: 17px;
+  }
+
+    #out {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+    #project-col {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .modal__dialog p {
+    font-size: 18px;
+  }
+  h1 {
+    font-size: 55px;
+  }
+
+  h2 {
+    font-size: 45px;
+  }
+
+  #experience h2{
+    font-size: 40px;
+  }
+
+  .list-group-horizontal li, .skill-li {
+    font-size: 18px;
+  }
+
+  h3, ul {
+    font-size: 32px;
+  }
+
+  #out {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  p, li {
+    font-size: 19px;
+  }
+  #project-col {
+    margin-right: 27px;
+  }
+  #modal-card h3{
+    font-size:30px;
+    margin-top:10px
+  }
+
+  .modal__dialog a{
+    font-size:17px;
+  }
+}
+
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 65px;
+  }
+  .list-group-horizontal li, .skill-li {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 50px;
+  }
+
+  h3, ul {
+    font-size: 32px;
+  }
+
+  p, li {
+    font-size: 19px;
+  }
+
+
+
+  #project-col {
+    margin-right: 30px;
+  }
+}
+
+/*  =========================. TIMELINE ========================= */
+  :root{
+    --tl: var(--bs-teal, #0ea5a4);
+  }
+
+  .badge {
+    font-size:15px;
+    color:rgb(80, 80, 80);
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 2.25rem;              /* space for line + dots */
+  }
+  .timeline::before{
+    content:"";
+    position:absolute;
+    left: 0.95rem;                       /* centers under the dots */
+    top: 0; bottom: 0;
+    width: 4px;
+    background: var(--tl);
+    border-radius: 2px;
+  }
+
+  .timeline-item{
+    border-radius: 10px;
+    position:relative;
+    margin: 0 0 1.75rem 0;               /* space between items */
+  }
+  .timeline-item::before{
+    /* the big round checkpoints */
+    content:"";
+    position:absolute;
+    left: -1.2rem;
+    top: 1.5rem;
+    width: 18px; height: 18px;
+    background: var(--tl);
+    border-radius: 50%;
+    transform: translate(-50%, 0);
+    z-index: 1004;
+    box-shadow: 0 0 0 6px color-mix(in srgb, var(--tl) 18%, transparent);
+  }
+
+  /* ---- branch box w/ bracket feel ---- */
+  .branch{
+    border-left: 4px solid var(--tl);    /* main vertical stroke */
+  }
+  /* decorative top/bottom caps to mimic a bracket */
+  .branch::before, .branch::after{
+    content:"";
+    position:absolute;
+    left:-4px;                           /* align with border-left */
+    width: 18px; height: 12px;
+    border-left:4px solid var(--tl);
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 14px;
+  }
+  .branch::before{ top: 8px; border-top:4px solid var(--tl); }
+  .branch::after { bottom: 8px; border-bottom:4px solid var(--tl); }
+
+  /* small colored bullets inside the branch list */
+  .branch .dot{
+    width: .6rem; height: .6rem;
+    border-radius: 50%;
+    background: var(--tl);
+    flex: 0 0 .6rem;
+    z-index: 1400;
+  }
+
+  /* optional: give this section extra top padding on <992px */
+  @media (max-width: 991.98px){
+    #experience{ padding-top: 30px; }
+  }

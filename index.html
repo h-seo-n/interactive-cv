@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Seoyeon Heo</title>
+    <meta name="description" content="An interactive portfolio of Seoyeon Heo, undergrad at SNU CSE.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-body-tertiary home-only FIXED-TOP" id="homeNavbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#home" id="home-navbar-brand">Seoyeon Heo</a>
+            <!--Hamburger bar for less than lg size-->
+            <!-- <h1 id="width">
+
+                <script>
+                    window.addEventListener("resize", () => {
+                        document.querySelector("#width").textContent = window.innerWidth;
+                    })
+                </script>
+            </h1> -->
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="#home" data-nav>Home</a>
+                    <a class="nav-link" href="#skill" data-nav>Skill & Project</a>
+                    <a class="nav-link" href="#experience" data-nav>Experience</a>
+                    <a class="nav-link" href="#outside-studies" data-nav>Outside studies</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <main id="app">
+
+        <section class="view is-active" data-view id="home" aria-hidden="false">
+            <div class="container pt-2" style="max-width:90%">
+                <div class="row justify-content-center align-content-center" id="profile-name-row">
+                    <div class="col-sm-5 col-md-5 shadow-drop">
+                        <img class="lazy" src="images/profile.png" data-animate="fade-up" data-delay="100"
+                            style="max-width:100%; height:auto;" alt="profile picture">
+                    </div>
+                    <div class="col-lg-1 d-none d-lg-block"></div>
+                    <div class="col-xs-12 col-sm-5 col-md-5 align-content-center align-self-center"
+                        style="margin-left:10px">
+                        <br>
+                        <h2 data-animate="fade-up" data-delay="100">Hi, I'm</h2>
+                        <h1 data-animate="fade-up" data-delay="100">Seoyeon Heo.</h1><br>
+                        <p id="explain-text" data-animate="fade-up" data-delay="100">
+                            🌱 A growing frontend developer, <br>
+                            🎓 Undergraduate student majoring in Computer Science and Engineering at Seoul
+                            National University.
+                        </p>
+                    </div>
+                </div>
+                <div class="row" id="spacing-row">
+                    <div class="col-1 d-none d-sm-block" id="blank-sm-col"><br></div>
+                    <div class="col-1 d-none d-md-block" id="blank-md-col"><br></div>
+                    <div class="col-1 d-none d-lg-block" id="blank-lg-col"><br></div>
+                    <div class="col-1 d-none d-xl-block" id="blank-xl-col"><br></div>
+                    <div class="col-1 d-none d-xxl-block" id="blank-xxl-col"><br><br></div>
+                </div>
+
+                <!--2nd section in 1st page-->
+                <div class="row justify-content-center align-content-center" id="personal-info-row">
+                    <div class="col-sm-6 mb-4" id="contact-col" data-animate="fade-up" data-delay="200">
+                        <div class="card hover-grow shadow border-0">
+                            <div class="card-body">
+
+                                <!--Contacts-->
+                                <h3 class="text-center">Contacts & Personal Info</h3>
+
+                                <!--contact list-->
+                                <div class="text-center">
+                                    <ul class="list-unstyled d-inline-block text-start m-0" id="contact-list">
+                                        <li class="item d-flex align-items-center">
+                                            <span class="icon-col">
+                                                <i class="bi bi-envelope-fill" id="email-icon"></i>
+                                            </span>
+                                            <a target="_blank" href="mailto:best3487@snu.ac.kr">best3487@snu.ac.kr</a>
+                                        </li>
+                                        <li class="item d-flex align-items-center">
+                                            <span class="icon-col">
+                                                <i class="bi bi-github" id="github-icon"></i>
+                                            </span>
+                                            <a target="_blank" href="https://github.com/h-seo-n">github</a>
+                                        </li>
+                                        <li class="item d-flex align-items-center">
+                                            <span class="icon-col">
+                                                <i class="bi bi-vimeo"></i>
+                                            </span>
+                                            <a target="_blank" href="https://velog.io/@h-seo-n/posts">velog</a>
+                                        </li>
+                                        <li class="item d-flex align-items-center">
+                                            <span class="icon-col">
+                                                <i class="bi bi-chat-left-text-fill" id="blog-icon"></i>
+                                            </span>
+                                            <a target="_blank" href="https://blog.naver.com/xersxe_y">Personal Blog</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="d-none d-sm-block"><br></div> -->
+                    <!--My interests-->
+                    <div class="col-sm-6" id="interest-col" data-animate="fade-up" data-delay="200">
+                        <div class="card hover-grow shadow border-0">
+                            <div class="card-body">
+                                <div id="interest" class="text-center align-content-center justify-content-center">
+                                    <h3 class="text-center">My Interests</h3>
+                                    <p class="d-inline-block text-start" style="width:90%;">
+                                        Fascinated on building an interactive web/app that, based on principles of
+                                        neuroscience, can provide relief for people by the interaction itself.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        
+                        <!--My Strength-->
+                        <div class="card hover-grow shadow border-0 d-none d-lg-block" >
+                            <div class="card-body">
+                                <div id="strength">
+                                    <h3 class="text-center">Strengths</h3>
+                                    <ul>
+                                        <li>Self-directed, highly motivated learner</li>
+                                        <li>
+                                            Growth-minded and continuously improving</li>
+
+                                        <li>Creative problem solver with an interdisciplinary lens</li>
+
+                                        <li>Clear communicator and collaborative teammate</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-auto d-lg-none mb-5" id="strength-col" data-animate="fade-up" data-delay="300">
+                        <div class="card hover-grow shadow border-0">
+                            <div class="card-body">
+                                <div id="strength">
+                                    <h3 class="text-center">Strengths</h3>
+                                    <ul>
+                                        <li>Self-directed, highly motivated learner</li>
+                                        <li>
+                                            Growth-minded and continuously improving</li>
+
+                                        <li>Creative problem solver with an interdisciplinary lens</li>
+
+                                        <li>Clear communicator and collaborative teammate</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+
+                </div>
+            </div>
+        </section>
+        <!--a floating bar-->
+
+        <!--now a page change-->
+        <section class="view" data-view id="skill" aria-hidden="true">
+            <!--SKILLS & PROJECTS-->
+            <div class="container" id="skill-container">
+                <div class="row justify-content-around">
+                    <!--SKILLS-->
+                    <div class="col-11 col-sm-10 col-md-9 col-lg-6 col-xl-5 text-center" id="skill-col">
+                        <h3>🔨 Skill Stacks</h3>
+                        <div class="card hover-grow shadow border-0">
+                            <div class="card-body" data-animate="fade-up" data-delay="200">
+                                <ul class="skill-li list-group list-group-flush">
+                                    <li class="list-group-item" style="margin-bottom: 5px;"><b>Programming Languages</b>
+                                        <ul class="list-group list-group-horizontal">
+                                            <li class="list-group-item" style="background-color: rgb(152, 216, 250);"><span>C++</span></li>
+                                            <li class="list-group-item" style="background-color: rgb(152, 216, 250);"><span>JavaScript</span></li>
+                                            <li class="list-group-item" style="background-color: rgb(152, 216, 250);"></span>Python</span></li>
+                                            <li class="list-group-item" style="background-color: rgb(152, 216, 250);"></span>HTML/CSS</span></li>
+                                        </ul>
+                                    </li>
+                                    <li class="skill-li list-group-item"><b>Database</b>
+                                        <ul class="list-group list-group-horizontal">
+                                            <li class="list-group-item" style="background-color: rgb(204, 244, 214);"">PostgreSQL</li>
+                                            <li class="list-group-item" style="background-color: rgb(204, 244, 214);"">MySQL</li>
+                                        </ul>
+                                    </li>
+                                    <li class="skill-li list-group-item"><b>Others</b>
+                                        <ul class="list-group list-group-horizontal">
+                                            <li class="list-group-item" style="background-color: rgb(247, 228, 160);">Git</li>
+                                            <li class="list-group-item" style="background-color: rgb(247, 228, 160);">Render</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <br><br>
+                    </div>
+                    <!--PROJECTS-->
+                    <div class="col-11 col-sm-10 col-md-9 col-lg-6 col-xl-6 " id="project-col"
+                        aria-labelledby="projects-title">
+                        <h3 id="projects-title" class="mb-4" style="text-align: center;">🧩 Projects</h3>
+
+                        <div class="card hover-grow shadow border-0 p-2">
+                            <ul class="list-group list-group-flush" data-animate="fade-up" data-delay="100">
+                                <li class="list-group-item">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h4 class="mb-0">Scream Jar</h4>
+                                        <span><mark>Qt</mark>&nbsp;<mark>C++</mark>
+                                            <mark>Flask</mark>&nbsp;<mark>PostgreSQL</mark></span>
+                                    </div>
+                                    <div class="d-flex w-100 justify-content-between my-3">
+                                        <p class="mb-0 text">A user-interactive stress-relief desktop app.
+                                            <br>track and analyze your screams and view your friend's latest screams
+                                            too!
+                                        </p>
+                                        <button class="gobtn btn btn-info ms-2 shadow-sm" data-action="open-modal"
+                                            data-target="#modal-screamjar">
+                                            <i class="bi bi-arrow-right"></i>
+                                        </button>
+                                    </div>
+                                </li>
+
+                                <li class="list-group-item mt-2">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h4 class="mb-0">Confetti To-do list</h4>
+                                        <span><mark>HTML</mark> <mark>CSS</mark>&nbsp;<mark>JavaScript</mark></span>
+                                    </div>
+                                    <div class="d-flex w-100 justify-content-between my-3">
+                                        <p class="mb-0 text">
+                                            Not just your average todo... it has a confetti effect!
+                                            <br>(and also some very cool styles)
+                                        </p>
+                                        <button class="gobtn shadow-sm btn btn-info ms-2" data-action="open-modal"
+                                            data-target="#modal-todo">
+                                            <i class="bi bi-arrow-right"></i>
+                                        </button>
+                                    </div>
+                                </li>
+
+
+                                <li class="list-group-item mt-1">
+                                    <h5 style="color:rgb(184, 183, 183)">Working on ...</h5>
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h4 class="mb-0">Card Maker</h4>
+                                        <span><mark>HTML</mark> <mark>CSS</mark>&nbsp;<mark>JavaScript</mark></span>
+                                    </div>
+                                    <div class="d-flex w-100 justify-content-between my-3">
+                                        <p class="mb-0 text">
+                                            can you blame me for wanting to attach a pretty card to a gift,
+                                            even if it is digital?
+                                            <br>background colors, images, stickers, text formatting -- coming soon!
+                                        </p>
+                                        <button class="gobtn shadow-sm btn btn-info ms-2" data-action="open-modal"
+                                            data-target="#modal-card">
+                                            <i class="bi bi-arrow-right"></i>
+                                        </button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+            </div>
+        </section>
+
+        <section id="experience" class="view container py-5" aria-hidden="true" data-view>
+            <h2 class="mb-4">⭐ Experience & Ongoing</h2>
+
+            <div class="row g-5 mt-1 align-items-start">
+                <!-- LEFT: main timeline -->
+                <div class="col-lg-7" data-animate="fade-up" data-delay="100">
+                    <ol class="timeline list-unstyled m-0" role="list" aria-label="Main experience timeline">
+                        <!-- item -->
+                        <li class="timeline-item" data-action="open-modal" data-target="modal-dwnc">
+                            <div class="card shadow hover-grow border-0">
+                                <div class="card-body">
+                                    <div class="d-flex mb-1 justify-content-between align-items-baseline gap-3">
+                                        <h3 class="h5 mb-1">SNU DWNC(Developing With No Code) club member & president
+                                        </h3>
+                                        <span class="badge">2023.03 — 2024.08</span>
+                                    </div>
+                                    <p class="mb-0 text-body-secondary small">
+                                        Completed multiple end-to-end IT project cycles with Bubble, strengthening
+                                        UI/UX-driven product planning and logic.
+                                        <br>
+                                        Served as president, enhancing leadership, collaboration, and coordination
+                                        skills.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- WAFFLE -->
+                        <li class="timeline-item" data-action="open-modal" data-target="modal-waffle">
+                            <div class="card shadow hover-grow border-0">
+                                <div class="card-body">
+                                    <div class="d-flex mb-1 justify-content-between align-items-baseline gap-3">
+                                        <h3 class="h5 mb-1">App/Web Development club Waffle Studio 23.5'th Rookie</h3>
+                                        <span class="badge">2025.09 — present</span>
+                                    </div>
+                                    <p class="mb-0 text-body-secondary small">
+                                        Attending frontend seminar, learning React, TypeScript, Node.js<br>
+
+                                        Building several mini projects & team project. </p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- CCS -->
+                        <li class="timeline-item" data-action="open-modal" data-target="modal-ccs">
+                            <div class="card shadow hover-grow border-0">
+                                <div class="card-body">
+                                    <div class="d-flex mb-1 justify-content-between align-items-baseline gap-3">
+                                        <h3 class="h5 mb-1">Undergrad. RA in Computational Clinical Science lab, SNU
+                                        </h3>
+                                        <span class="badge">2025.09 — present</span>
+                                    </div>
+                                    <p class="mb-0 text-body-secondary small">
+                                        As an RA, motivated to learn more about the computational methodologies of
+                                        studying clinical psychology, especially addiction.
+                                        <br>Currently engaged in analyzing complex fMRI data with Topological Data
+                                        Analysis(TDA) methods.
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+
+                <!-- RIGHT: branch list -->
+                <div class="col-lg-5" data-animate="fade-up" data-delay="100">
+                    <h3 class="h4 text-uppercase text-body-secondary mb-3" style="text-align: center;">Other Activities
+                    </h3>
+
+                    <div class="branch p-4 rounded-3 bg-body position-relative">
+                        <ul class="list-unstyled m-0">
+
+                            <li class="align-items-start shadow-sm gap-2 mb-2 hover-grow border-0">
+                                <span class="dot mt-1"></span>
+                                <div class="card border-0 hover-grow gap-3">
+                                    <div class="card-body"><b>Human Rights Council member</b>
+                                        <span class="badge">2023.07 — 2024.02</span>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="align-items-start shadow-sm gap-2 mb-2 hover-grow border-0">
+                                <span class="dot mt-1"></span>
+                                <div class="card border-0 hover-grow gap-3">
+                                    <div class="card-body"><b>Academic coaching</b>
+                                        <span class="badge">2023.07 — 2024.12</span>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="align-items-start shadow-sm gap-2 mb-2 hover-grow border-0">
+                                <span class="dot mt-1"></span>
+                                <div class="card border-0 hover-grow gap-3">
+                                    <div class="card-body"><b>Coauthor of No-Code E-books</b>
+                                        <span class="badge">2023.06 — 2023.08</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="view pt-5" data-view id="outside-studies" aria-hidden="true">
+            <div class="container" id="outside-studies-con">
+                <!--OUTSIDE STUDIES-->
+                <h2 style="text-align: center;">☘️ Outside Studies</h2>
+                <br>
+                <div class="row row-cols-1 row-cols-sm-3 g-6" id="out">
+                    <div class="col mb-5">
+                        <div class="card hover-grow h-100" >
+                            <img src="images/drawing.jpeg" class="lazy card-img-top" alt="..." data-animate="fade-up" data-delay="200">
+                            <div class="card-body" data-animate="fade-up" data-delay="200">
+                                <h5 class="card-title">🎨 Creating</h5>
+                                <p class="card-text">namely drawing sketches and writing about various things. <br>
+                                    Maybe plotting scenarios and stories in my head as well!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100 hover-grow">
+                            <img src="images/book.jpeg" class="lazy card-img-top" alt="..." data-animate="fade-up" data-delay="200">
+                            <div class="card-body" data-animate="fade-up" data-delay="200">
+                                <h5 class="card-title">📚 Reading</h5>
+                                <p class="card-text">Cannot live without delving into palm-moistening, or heart-warming
+                                    reads. <br>
+                                    But likes nonfiction about psychology/neuroscience and sociology as well!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 hover-grow"  >
+                            <img src="images/piano.jpeg" class="lazy card-img-top" alt="..." data-animate="fade-up" data-delay="200">
+                            <div class="card-body" data-animate="fade-up" data-delay="200">
+                                <h5 class="card-title" >🎶 Playing</h5>
+                                <p class="card-text">Recently took up playing the piano(revival since 11 years 😵)<br>
+                                    and learning House dance steps. Definitely helps to know there are things more
+                                    frustrating my studies!</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!--MODALS -->
+
+    <div class="modal" id="modal-screamjar" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal__backdrop" data-action="close-modal"></div>
+        <div class="p-2 modal__dialog align-content-center justify-content-center" role="document" tabindex="-1">
+            <button class="modal__close" aria_label="close" data-action="close-modal">x</button>
+            <h3>Scream Jar</h3>
+            <img class="shadow lazy" id="scream" src="images/screamJar.jpg" alt="Scream Jar main ui">
+            <ul class="list-unstyled shadow-sm">
+                <li> <a target="_blank" href="https://github.com/h-seo-n/Scream-Jar" alt="link to ScreamJar project repository">
+                        <i class="bi bi-github"></i>
+                        More information on github</a></li>
+                <li>
+                    <a target="_blank"
+                        href="https://velog.io/@h-seo-n/%ED%86%A0%EC%9D%B4-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%B2%AB-%EA%B0%9C%EC%9D%B8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B3%A0%ED%95%A8%ED%95%AD%EC%95%84%EB%A6%AC-%EA%B0%9C%EB%B0%9C-%EA%B8%B0%EB%A1%9D">
+                        <i class="bi bi-vimeo"></i>
+                        Check architecture design & other logs at velog
+                    </a>
+                </li>
+
+            </ul>
+            <p style="padding-left: 10px; padding-right:10px; width:100%">
+                Scream Jar is a stress-relief desktop application where you can scream out your frustration, agony, and
+                stress as much as you like.
+                stack📚, analyze📊 screams by calendar-based analysis🗓️, connect with your friends' screams 🤝,
+                customize 🎨!
+            </p>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal-todo" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal__backdrop" data-action="close-modal"></div>
+        <div class="p-2 align-content-center justify-content-center modal__dialog" role="document" tabindex="-1">
+            <button class="modal__close" aria_label="close" data-action="close-modal">x</button>
+            <h3>To-do list with Confetti</h3>
+            <iframe src="https://hseontodos.vercel.app/"></iframe>
+            <ul class="list-unstyled shadow-sm">
+                <li> <a  target="_blank" href="https://github.com/h-seo-n/front-small-demos/tree/main/todo-list"
+                        alt="link to todo project repository">
+                        <i class="bi bi-github"></i>
+                        Check Github Repository</a>
+                    </li>
+                <li>
+                    <a target="_blank" href="https://hseontodos.vercel.app/">
+                        <i class="bi bi-check2-square"></i>Open the App and Try!
+                    </a>
+                </li>
+
+            </ul>
+            <p style="padding-left: 10%; padding-right:10%; width:100%">
+                can add, delete, and complete todos.
+                <br>and a confetti effect when you complete your todo!
+            </p>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal-card" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal__backdrop" data-action="close-modal"></div>
+        <div class="p-2 modal__dialog align-content-center justify-content-center" role="document" tabindex="-1">
+            <button class="modal__close" aria_label="close" data-action="close-modal">x</button>
+            <h3>Card Maker</h3>
+            <img class="shadow lazy" id="card" src="images/giftcard.png" alt="Card Maker main ui">
+
+            <ul class="list-unstyled shadow-sm">
+                <li> <a target="_blank" href="https://github.com/h-seo-n/card-maker" alt="link to ScreamJar project repository">
+                        <i class="bi bi-github"></i>
+                        See more details on github</a></li>
+                <li>
+                    </a>
+                </li>
+
+            </ul>
+            <p style="padding-left: 10px; padding-right:10px; width:100%">
+                A service where users can customize a simple card and save it as an image.
+                Choosing background, adding elements including stickers and texts, and saving the completed cards as image coming soon!
+            </p>
+
+        </div>
+    </div>
+
+    <!--Floating Button-->
+    <!--down-->
+    <!-- HTML -->
+    <a target="_blank" href="https://github.com/h-seo-n"
+    class="btn btn-primary github-expand-btn floating"
+    aria-label="Go to GitHub Profile">
+    <i class="bi bi-github"></i>
+    <span class="label">Go to GitHub Profile</span>
+    </a>
+
+    <!-- <button id="goDownBtn" class="btn btn-primary btn-lg floating" aria-label="go to github">
+        <i class="bi bi-github"></i>
+    </button> -->
+    
+    <script src="index.js"></script>
+</body>
+
+</html>

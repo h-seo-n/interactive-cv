@@ -398,6 +398,43 @@ z-index: 1;
 }
 
 /*====================  =====================*/
+@media (max-width: 575.98px) {
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  ul {
+    font-size:10px;
+  }
+  span.badge {
+    font-size: 8px;
+  };
+
+
+  .card .card-body {
+    padding:0px;
+    margin:0px;
+  }
+
+  .card h4{
+    font-size:13px;
+  }
+
+  .card h3{
+    font-size: 13px;
+  }
+
+
+  .card p {
+    font-size:10px;
+  }
+  .card span {
+    font-size: 8pxl
+  }
+}
+
+
 /* <992px */
 @media (max-width: 991.98px) {
   #skill-container { padding-top: 40px; }
